@@ -1,52 +1,45 @@
 body {
-  background-color: #6c5b7b;
-  color: #fff;
-  font-family: 'Nanum Gothic', sans-serif;
-}
-
-.container {
-  margin-top: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-label {
-  font-size: 2em;
-  margin-bottom: 1em;
-}
-
-input {
-  padding: 0.5em;
-  font-size: 1.2em;
-  border: none;
-  border-radius: 5px;
-  margin-bottom: 1em;
-}
-
-button {
-  padding: 0.5em 1em;
-  background-color: #8d6e63;
-  color: #fff;
-  font-size: 1.2em;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #654321;
+  background-color: #2d3436;
+  color: #dfe6e9;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 h1 {
-  font-size: 4em;
-  margin-bottom: 2em;
+  text-align: center;
 }
+
+input[type=text] {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 16px;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  padding: 12px 24px;
+  border-radius: 6px;
+  border: none;
+  background-color: #0984e3;
+  color: #dfe6e9;
+  cursor: pointer;
+}
+
+.fortune-box {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 24px;
+  background-color: #dfe6e9;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#fortune-text {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
