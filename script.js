@@ -1,8 +1,10 @@
 window.addEventListener('load', () => {
-  const params = new URLSearchParams(window.location.search);
-  const name = params.get('name');
-  const title = document.querySelector('#title');
-  const result = document.querySelector('#result');
+  const urlParams = new URLSearchParams(window.location.search);
+  const name = urlParams.get('name');
+  const title = document.getElementById('title');
+  const fortuneText = document.getElementById('fortune-text');
+
+  title.textContent = `${name} 님의 오늘의 운세`;
 
   const fortunes = [
     "오늘은 운 좋은 하루! 기분 좋은 일이 생길 거에요.",
