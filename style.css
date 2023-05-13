@@ -58,3 +58,12 @@ button:hover {
   margin-top: 50px;
   line-height: 2.5rem;
 }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f8f8;
+  padding: 10px;
+  text-align: center;
+}
