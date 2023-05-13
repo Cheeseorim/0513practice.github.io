@@ -1,9 +1,9 @@
+// result.html에서 title 설정
+const urlParams = new URLSearchParams(window.location.search);
+const name = urlParams.get('name');
+document.title = `${name}의 오늘의 운세`;
 
-const fortuneForm = document.getElementById('fortune-form');
-const nameInput = document.getElementById('name-input');
-const fortuneContainer = document.getElementById('fortune-container');
-const resultTitle = document.getElementById('result-title');
-const fortuneText = document.getElementById('fortune-text');
+// 운세 목록
 const fortunes = [
     "오늘은 운 좋은 하루! 기분 좋은 일이 생길 거에요.",
     "오늘은 좀 힘들 수도 있겠어요. 하지만 괜찮아질 거에요.",
@@ -24,13 +24,11 @@ const fortunes = [
     "당신은 멋진 사람이에요. 자신감을 가지세요."
   ];
 
-  fortuneForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const name = nameInput.value;
-    const randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
-    const pageTitle = ${name}의 오늘의 운세;
-    resultTitle.innerText = pageTitle;
-    document.title = pageTitle;
-    fortuneText.innerText = randomFortune;
-    window.location.href = 'result.html';
-    });
+// 운세 텍스트 박스에 랜덤한 운세 입력
+const fortuneText = document.getElementById('fortune-text');
+const randomFortuneIndex = Math.floor(Math.random() * fortunes.length);
+fortuneText.innerHTML = fortunes[randomFortuneIndex];
+
+// 제목 설정
+const resultTitle = document.getElementById('result-title');
+resultTitle.innerHTML = `${name}의 오늘의 운세`;

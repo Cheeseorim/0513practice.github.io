@@ -21,5 +21,12 @@
         <a href="mailto:cheeseorim@gmail.com">문의 : cheeseorim@gmail.com</a>
     </footer>
     <script src="script.js"></script>
+    <script>
+      function handleSubmit(event) {
+        event.preventDefault(); // 폼 제출 기본 동작 막기
+        const name = document.getElementById('name-input').value;
+        window.location.href = `result.html?name=${name}`; // 이름 값과 함께 result.html로 이동
+      }
+    </script>
 </body>
 </html>
