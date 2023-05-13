@@ -1,5 +1,10 @@
 
-  const fortunes = [
+const fortuneForm = document.getElementById('fortune-form');
+const nameInput = document.getElementById('name-input');
+const fortuneContainer = document.getElementById('fortune-container');
+const resultTitle = document.getElementById('result-title');
+const fortuneText = document.getElementById('fortune-text');
+const fortunes = [
     "오늘은 운 좋은 하루! 기분 좋은 일이 생길 거에요.",
     "오늘은 좀 힘들 수도 있겠어요. 하지만 괜찮아질 거에요.",
     "가까운 친구나 가족과 함께하면 오늘은 더 기분 좋은 하루가 될 거에요.",
@@ -19,32 +24,13 @@
     "당신은 멋진 사람이에요. 자신감을 가지세요."
   ];
 
-// 랜덤한 운세 얻기
-function getFortune() {
-  const randomIndex = Math.floor(Math.random() * fortuneList.length);
-  return fortuneList[randomIndex];
-}
-
-// 운세 텍스트 업데이트
-function updateFortuneText() {
-  const fortuneText = document.getElementById('fortune-text');
-  fortuneText.innerText = getFortune();
-}
-
-// '다시 하기' 버튼 클릭 이벤트 처리
-function handleRestartButtonClick() {
-  window.location.href = "index.html";
-}
-
-// 초기화
-function init() {
-  // 운세 텍스트 업데이트
-  updateFortuneText();
-
-  // '다시 하기' 버튼 클릭 이벤트 등록
-  const restartButton = document.getElementById('restart-button');
-  restartButton.addEventListener('click', handleRestartButtonClick);
-}
-
-// 페이지 로드 시 초기화 수행
-window.onload = init;
+  fortuneForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const name = nameInput.value;
+    const randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
+    const pageTitle = ${name}의 오늘의 운세;
+    resultTitle.innerText = pageTitle;
+    document.title = pageTitle;
+    fortuneText.innerText = randomFortune;
+    window.location.href = 'result.html';
+    });
