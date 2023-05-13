@@ -15,6 +15,12 @@
   <footer>
     <p>문의: cheeseorim@gmail.com</p>
   </footer>
-  <script src="script.js"></script>
+  <script>
+    const searchBtn = document.getElementById("searchBtn");
+    searchBtn.addEventListener("click", function () {
+      const name = document.getElementById("name").value;
+      window.location.href = `result.html?name=${name}`;
+});
+  </script>
 </body>
 </html>
