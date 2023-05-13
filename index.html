@@ -8,20 +8,18 @@
 </head>
 <body>
   <h1>Fortune Teller</h1>
-  <form>
-    <input type="text" id="name-input" placeholder="이름을 입력하세요">
-    <button type="submit" id="submit-button">GO</button>
-  </form>
-  <footer>
-    <div class="container">
-      <p>문의 : <a href="mailto:cheeseorim@gmail.com">cheeseorim@gmail.com</a></p>
-    </div>
-  </footer>
+
   <form onsubmit="submitForm(event)">
     <label for="name">이름을 입력하세요:</label>
     <input type="text" id="name" name="name" required>
     <button type="submit">Go</button>
   </form>
+
+  <footer>
+    <div class="container">
+      <p>문의 : <a href="mailto:cheeseorim@gmail.com">cheeseorim@gmail.com</a></p>
+    </div>
+  </footer>
   
   <script>
   function submitForm(event) {
