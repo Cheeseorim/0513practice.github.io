@@ -1,45 +1,92 @@
-body {
-  background-color: #2d3436;
-  color: #dfe6e9;
-  font-family: 'Noto Sans KR', sans-serif;
+/* 전체 화면에 대한 설정 */
+html, body {
+  height: 100%;
 }
 
+/* 제목 스타일 */
 h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 4rem;
   text-align: center;
+  margin-top: 3rem;
+  color: #2d3436;
 }
 
-input[type=text] {
-  width: 100%;
-  max-width: 400px;
-  padding: 12px;
-  border-radius: 6px;
-  border: none;
-  margin-bottom: 16px;
+/* 이름 입력창 스타일 */
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
 }
 
-button {
-  display: block;
-  margin: 0 auto;
-  padding: 12px 24px;
-  border-radius: 6px;
-  border: none;
-  background-color: #0984e3;
-  color: #dfe6e9;
+.input-box {
+  font-size: 2rem;
+  padding: 1rem;
+  margin: 0 1rem;
+  width: 60%;
+  border: 2px solid #2d3436;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* GO 버튼 스타일 */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.btn {
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  border: 2px solid #2d3436;
+  border-radius: 5px;
+  background-color: #2d3436;
+  color: white;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.fortune-box {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 24px;
-  background-color: #dfe6e9;
-  border-radius: 10px;
+.btn:hover {
+  background-color: white;
+  color: #2d3436;
+}
+
+/* footer 스타일 */
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   text-align: center;
+  padding: 1rem;
+  background-color: #f1f2f6;
 }
 
-#fortune-text {
-  font-size: 24px;
-  line-height: 1.5;
+.footer-text {
+  font-size: 1.2rem;
+  color: #2d3436;
 }
 
+/* responsive 스타일 */
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .input-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .input-box {
+    width: 80%;
+    margin: 1rem 0;
+  }
+
+  .btn {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+}
