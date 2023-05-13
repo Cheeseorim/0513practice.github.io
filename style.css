@@ -1,116 +1,64 @@
-/* 전체 폰트 */
+/* body */
 body {
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
+  background: linear-gradient(to bottom, #d8c4b8, #ffefd5);
+  height: 100vh;
+  margin: 0;
 }
 
-/* 제목 스타일 */
+/* header */
+header {
+  text-align: center;
+  margin-top: 30px;
+}
+
 h1 {
   font-size: 3rem;
-  text-align: center;
-  color: #555;
-  margin-top: 3rem;
+  color: #542a0a;
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
 }
 
-/* 이름 입력창 스타일 */
-.form-container {
-  margin: 0 auto;
-  width: 80%;
-  max-width: 400px;
+/* fortune form */
+form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  background-color: #eee;
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  margin-top: 100px;
 }
 
-.input-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
-}
-
-.label-text {
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #555;
-}
-
-.input-field {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border: 2px solid #aaa;
-  border-radius: 0.5rem;
-  outline: none;
-}
-
-/* GO 버튼 스타일 */
-.go-button {
-  width: 100%;
-  background-color: #555;
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding: 0.8rem 1rem;
+input[type="text"] {
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 10px;
   border: none;
-  border-radius: 0.5rem;
+  margin-bottom: 20px;
+}
+
+button[type="submit"] {
+  background-color: #542a0a;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
-  margin-top: 1rem;
-  outline: none;
-}
-
-/* 결과 페이지 스타일 */
-.result-container {
-  margin: 0 auto;
-  width: 80%;
-  max-width: 600px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  background-color: #eee;
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-}
-
-.result-title {
-  font-size: 2rem;
   text-align: center;
-  color: #555;
-  margin-bottom: 2rem;
+  transition: background-color 0.3s ease;
 }
 
-.result-text {
-  font-size: 1.2rem;
-  text-align: center;
-  color: #555;
-  margin-bottom: 2rem;
+button[type="submit"]:hover {
+  background-color: #b36334;
 }
 
-/* footer 스타일 */
+/* footer */
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #333;
-  color: #fff;
-  padding: 1rem;
   text-align: center;
-  font-size: 0.8rem;
+  margin-top: auto;
+  margin-bottom: 20px;
 }
 
-.footer-text {
-  color: #fff;
-  text-decoration: underline;
-  cursor: pointer;
+footer p {
+  color: #542a0a;
+  font-size: 1rem;
 }
