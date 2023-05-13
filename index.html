@@ -9,7 +9,7 @@
 <body>
   <h1 class="title">오늘의 운세</h1>
   <div class="form-container">
-    <form id="fortune-form">
+    <form id="fortune-form" onsubmit="handleSubmit(event)">
       <label for="name">이름</label>
       <input type="text" id="name-input">
       <button type="submit" class="btn">GO</button>
