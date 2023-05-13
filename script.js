@@ -1,10 +1,3 @@
-window.addEventListener('load', () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  const name = urlParams.get('name');
-  const title = document.getElementById('title');
-  const fortuneText = document.getElementById('fortune-text');
-
-  title.textContent = `${name} 님의 오늘의 운세`;
 
   const fortunes = [
     "오늘은 운 좋은 하루! 기분 좋은 일이 생길 거에요.",
@@ -26,16 +19,32 @@ window.addEventListener('load', () => {
     "당신은 멋진 사람이에요. 자신감을 가지세요."
   ];
 
-  function getRandomFortune() {
-    const randomIndex = Math.floor(Math.random() * fortunes.length);
-    return fortunes[randomIndex];
-  }
+// 랜덤한 운세 얻기
+function getFortune() {
+  const randomIndex = Math.floor(Math.random() * fortuneList.length);
+  return fortuneList[randomIndex];
+}
 
-  if (name) {
-    title.innerText = `${name}님의 오늘의 운세`;
-    const fortune = getRandomFortune();
-    result.innerHTML = `<div class="text-box">${fortune}</div>`;
-  } else {
-    title.innerText = '오늘의 운세';
-  }
-});
+// 운세 텍스트 업데이트
+function updateFortuneText() {
+  const fortuneText = document.getElementById('fortune-text');
+  fortuneText.innerText = getFortune();
+}
+
+// '다시 하기' 버튼 클릭 이벤트 처리
+function handleRestartButtonClick() {
+  window.location.href = "index.html";
+}
+
+// 초기화
+function init() {
+  // 운세 텍스트 업데이트
+  updateFortuneText();
+
+  // '다시 하기' 버튼 클릭 이벤트 등록
+  const restartButton = document.getElementById('restart-button');
+  restartButton.addEventListener('click', handleRestartButtonClick);
+}
+
+// 페이지 로드 시 초기화 수행
+window.onload = init;
