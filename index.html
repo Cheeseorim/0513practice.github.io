@@ -15,12 +15,18 @@
   <footer>
     <p>문의: cheeseorim@gmail.com</p>
   </footer>
+  <form onsubmit="submitForm(event)">
+    <label for="name">이름을 입력하세요:</label>
+    <input type="text" id="name" name="name" required>
+    <button type="submit">Go</button>
+  </form>
+  
   <script>
-    const searchBtn = document.getElementById("searchBtn");
-    searchBtn.addEventListener("click", function () {
-      const name = document.getElementById("name").value;
-      window.location.href = `result.html?name=${name}`;
-});
+  function submitForm(event) {
+    event.preventDefault(); // 기본 동작 중지
+    const name = document.getElementById('name').value;
+    window.location.href = `result.html?name=${name}`; // result.html로 이동
+  }
   </script>
 </body>
 </html>
