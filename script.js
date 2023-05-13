@@ -1,9 +1,22 @@
 window.addEventListener('load', () => {
   const form = document.querySelector('form');
   const input = document.querySelector('input');
-  const button = document.querySelector('button');
-  const result = document.querySelector('#result');
-
+  const button = document.querySelector('#go-button');
+  
+  function handleSubmit(event) {
+  event.preventDefault();
+  const name = input.value;
+  localStorage.setItem("name", name); // 저장
+  location.href = 'result.html'; // 페이지 이동
+  }
+  
+  form.addEventListener('submit', handleSubmit);
+  });
+  
+  window.addEventListener('DOMContentLoaded', () => {
+  const name = localStorage.getItem("name"); // 불러오기
+  const title = document.querySelector('h1');
+  const fortuneBox = document.querySelector('.fortune-box');
   const fortunes = [
   "오늘은 운 좋은 하루! 기분 좋은 일이 생길 거에요.",
   "오늘은 좀 힘들 수도 있겠어요. 하지만 괜찮아질 거에요.",
@@ -27,17 +40,8 @@ window.addEventListener('load', () => {
   function getRandomFortune() {
     const randomIndex = Math.floor(Math.random() * fortunes.length);
     return fortunes[randomIndex];
-  }
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    const name = input.value;
-    const fortune = getRandomFortune();
-    result.innerHTML = `${name}님의 오늘의 운세: ${fortune}`;
-  }
-
-  form.addEventListener('submit', handleSubmit);
-});
-
-
-
+    }
+    
+    title.innerHTML = ${name}님의 오늘의 운세; // 이름 적용
+    fortuneBox.innerHTML = getRandomFortune(); // 운세 적용
+    });

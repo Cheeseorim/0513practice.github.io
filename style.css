@@ -1,7 +1,7 @@
 /* body */
 body {
   font-family: 'Noto Sans KR', sans-serif;
-  background: linear-gradient(to bottom, #d8c4b8, #ffefd5);
+  background-color: #3a2c3a;
   height: 100vh;
   margin: 0;
 }
@@ -14,8 +14,9 @@ header {
 
 h1 {
   font-size: 3rem;
-  color: #542a0a;
+  color: #f5e0e6;
   text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+  text-align: center;
 }
 
 /* fortune form */
@@ -25,6 +26,7 @@ form {
   align-items: center;
   justify-content: center;
   margin-top: 100px;
+  margin-bottom: 50px;
 }
 
 input[type="text"] {
@@ -36,8 +38,8 @@ input[type="text"] {
 }
 
 button[type="submit"] {
-  background-color: #542a0a;
-  color: #fff;
+  background-color: #f5e0e6;
+  color: #3a2c3a;
   font-size: 1.5rem;
   padding: 10px 20px;
   border: none;
@@ -48,7 +50,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #b36334;
+  background-color: #a9a9a9;
 }
 
 /* footer */
@@ -59,6 +61,6 @@ footer {
 }
 
 footer p {
-  color: #542a0a;
+  color: #f5e0e6;
   font-size: 1rem;
 }
