@@ -1,32 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fortune Teller</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>Fortune Teller</h1>
-
-  <form onsubmit="submitForm(event)">
-    <label for="name">이름을 입력하세요:</label>
-    <input type="text" id="name" name="name" required>
-    <button type="submit">Go</button>
-  </form>
-
-  <footer>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘의 운세</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
     <div class="container">
-      <p>문의 : <a href="mailto:cheeseorim@gmail.com">cheeseorim@gmail.com</a></p>
+      <h1>오늘의 운세</h1>
+      <form id="fortune-form">
+        <label for="name">이름:</label>
+        <input type="text" id="name" name="name" placeholder="이름을 입력하세요" required>
+        <button type="submit" id="go-button">GO</button>
+      </form>
     </div>
-  </footer>
-  
-  <script>
-  function submitForm(event) {
-    event.preventDefault(); // 기본 동작 중지
-    const name = document.getElementById('name').value;
-    window.location.href = `result.html?name=${name}`; // result.html로 이동
-  }
-  </script>
-</body>
+    <footer>
+      <p>문의: <a href="mailto:cheeseorim@gmail.com">cheeseorim@gmail.com</a></p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>

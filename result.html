@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>[name]님의 오늘의 운세</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘의 운세</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>[name]님의 오늘의 운세</h1>
-    <div class="fortune-box">
-      <p id="fortune-text"></p>
+    <div class="container">
+      <h1>오늘의 운세</h1>
+      <form id="fortune-form">
+        <label for="name">이름:</label>
+        <input type="text" id="name" name="name" placeholder="이름을 입력하세요" required>
+        <button type="submit" id="go-button">GO</button>
+      </form>
     </div>
+    <footer>
+      <p>문의: <a href="mailto:cheeseorim@gmail.com">cheeseorim@gmail.com</a></p>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>

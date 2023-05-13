@@ -1,5 +1,10 @@
-// 오늘의 운세 리스트
-const fortunes = [
+window.addEventListener('load', () => {
+  const form = document.querySelector('form');
+  const input = document.querySelector('input');
+  const button = document.querySelector('button');
+  const result = document.querySelector('#result');
+
+  const fortunes = [
   "오늘은 운 좋은 하루! 기분 좋은 일이 생길 거에요.",
   "오늘은 좀 힘들 수도 있겠어요. 하지만 괜찮아질 거에요.",
   "가까운 친구나 가족과 함께하면 오늘은 더 기분 좋은 하루가 될 거에요.",
@@ -16,28 +21,23 @@ const fortunes = [
   '주위에 좋은 사람들이 많아요. 그들과 함께하면 더 행복할 거에요.',
   "오늘은 건강이 최고예요. 무리하지 말고 컨디션을 잘 챙기세요.",
   "오늘은 재미있는 일이 있을 거에요. 마음껏 즐기세요!",
-  "당신은 멋진 사람이에요. 자신감을 가지세요.",
-];
+  "당신은 멋진 사람이에요. 자신감을 가지세요."
+  ];
 
-// 사용자 이름을 가져오는 함수
-function getName() {
-  const nameInput = document.getElementById('name-input');
-  const name = nameInput.value;
-  return name;
-}
+  function getRandomFortune() {
+    const randomIndex = Math.floor(Math.random() * fortunes.length);
+    return fortunes[randomIndex];
+  }
 
-// 오늘의 운세를 보여주는 함수
-function showFortune() {
-  const name = getName();
-  const fortune = fortunes[Math.floor(Math.random() * fortunes.length)];
+  function handleSubmit(event) {
+    event.preventDefault();
+    const name = input.value;
+    const fortune = getRandomFortune();
+    result.innerHTML = `${name}님의 오늘의 운세: ${fortune}`;
+  }
 
-  const title = document.getElementById('fortune-title');
-  title.innerHTML = `${name}님의 오늘의 운세`;
+  form.addEventListener('submit', handleSubmit);
+});
 
-  const fortuneText = document.getElementById('fortune-text');
-  fortuneText.innerHTML = fortune;
-}
 
-// '운세 보기' 버튼에 클릭 이벤트 추가
-const fortuneButton = document.getElementById('fortune-button');
-fortuneButton.addEventListener('click', showFortune);
+
