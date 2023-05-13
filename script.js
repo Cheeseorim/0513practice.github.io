@@ -1,7 +1,14 @@
+const button = document.querySelector('#go-button');
+button.addEventListener('click', () => {
+  const form = document.querySelector('#fortune-form');
+  form.submit();
+});
+
 window.addEventListener('load', () => {
   const result = document.querySelector('#result');
-  const name = document.querySelector('#name');
-  const title = document.querySelector('#title');
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const name = urlParams.get('name');
   const fortunes = [
     "오늘은 운 좋은 하루! 기분 좋은 일이 생길 거에요.",
     "오늘은 좀 힘들 수도 있겠어요. 하지만 괜찮아질 거에요.",
@@ -27,12 +34,6 @@ window.addEventListener('load', () => {
     return fortunes[randomIndex];
   }
 
-  const savedName = localStorage.getItem('name');
-  if (savedName) {
-    title.innerHTML = `${savedName}님의 오늘의 운세`;
-    name.innerHTML = `${savedName}님의 오늘의 운세`;
-  }
-
   const fortune = getRandomFortune();
-  result.innerHTML = fortune;
+  result.innerHTML = `${name}님의 오늘의 운세: ${fortune}`;
 });
