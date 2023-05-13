@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - 실습3</title>
+  <title>CodePen - 실습4</title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
@@ -10,28 +10,21 @@
 <!-- partial:index.partial.html -->
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>한국어 유사어 찾기</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <h1>한국어 유사어 찾기</h1>
-    <div class="search">
-      <label for="word">단어 입력:</label>
-      <input type="text" id="word" name="word" placeholder="한국어 단어를 입력해주세요">
-      <button id="searchBtn">찾기</button>
+  <head>
+    <title>오늘의 운세</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>오늘의 운세</h1>
+      <form>
+        <label for="name-input">이름을 입력하세요:</label>
+        <input type="text" id="name-input" required>
+        <button type="submit">운세 알아보기</button>
+      </form>
     </div>
-    <div class="results">
-      <h2>검색 결과:</h2>
-      <ul id="resultList">
-      </ul>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
 <!-- partial -->
   <script  src="./script.js"></script>
